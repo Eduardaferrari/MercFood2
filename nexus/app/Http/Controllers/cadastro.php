@@ -1,15 +1,13 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\View\View; 
 
-class cadastro extends Controller
+class cadastroController extends Controller
 {
-    public function index(): View
+    public function cadastro()
     {
-        return view('cadastro');
+        return view('cadastro'); 
     }
 }

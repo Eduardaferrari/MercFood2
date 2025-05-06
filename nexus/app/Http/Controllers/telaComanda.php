@@ -1,15 +1,13 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\View\View; 
 
-class telaComanda extends Controller
+class TelacomandaController extends Controller
 {
-    public function index(): View
+    public function telacomanda()
     {
-        return view('telaComanda');
+        return view('telacomanda'); 
     }
 }
