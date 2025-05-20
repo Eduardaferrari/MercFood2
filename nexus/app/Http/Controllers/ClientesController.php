@@ -22,15 +22,25 @@ class ClientesController extends Controller
      */
     public function create()
     {
-        //
-    }
+        return view('create');
+        }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        $cliente = new Cliente();
+        $cliente->nome = $request->nome;
+        $cliente->endereco = $request->endereco;
+        $cliente->telefone = $request->telefone;
+        $cliente->email = $request->email;
+        $cliente->senha = $request->senha;
+        $cliente->timestamps = $request->timestamps;
+
+        $cliente->save();
+
+        return redirect()->route('clientes.index');
     }
 
     /**
@@ -38,7 +48,8 @@ class ClientesController extends Controller
      */
     public function show(string $id)
     {
-        //
+        echo 'aqui';
+
     }
 
     /**
@@ -46,7 +57,10 @@ class ClientesController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $cliente = new Cliente();
+        $cliente = $cliente->where('id', $id)->first();
+
+        return view('create', compact(['pokemon']));
     }
 
     /**
@@ -54,7 +68,18 @@ class ClientesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $cliente = new Cliente();
+        $cliente->id = $request->id;
+        $cliente = $cliente->where('id', $id)->first();
+        $cliente->nome = $request->nome;
+        $cliente->endereco = $request->endereco;
+        $cliente->telefone = $request->telefone;
+        $cliente->timestamps = $request->timestamps;
+
+        $cliente->save();
+
+        return redirect()->route('cadastro.index');
+
     }
 
     /**
@@ -62,6 +87,11 @@ class ClientesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $cliente = new Cliente();
+        $cliente = $cliente->where('id', $id)->first();
+
+        $cliente->delete();
+
+        return redirect()->route('cadastro.index');
     }
 }

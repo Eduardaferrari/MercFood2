@@ -1,22 +1,21 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
 body {
     margin: 0;
     background-image: url('/public/fundoLogin.png');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center; 
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 main {
@@ -25,21 +24,41 @@ main {
     align-items: center;
     width: 100%;
     height: 100%;
-}   
-
-.titulo{
-    text-align: center;
-    color: #FFF;
-    font-size: 2.5em;
 }
 
-.form{
-    width: 15em;
+.container {
+    background-color: #F5F5F5;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
 }
 
-.paragrafo{
+.cadastro {
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%; 
+    max-width: 400px; 
     text-align: center;
-    color: #FFF;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+.titulo {
+    margin-bottom: 10px;
+    width: 100%; 
+    text-align: center;
+}
+
+.paragrafo {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%; 
 }
 
 input[type="email"],
@@ -47,36 +66,39 @@ input[type="password"],
 input[type="tel"],
 input[type="text"] {
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     margin: 8px 0;
     text-align: left;
-    border: none;
-    width: calc(100% - 5px); 
+    border: 30;
+    width: 400px; 
     display: block; 
 }
 
-.botoes{
-    display: flex;
-    justify-content: center;
+.botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    gap: 10px;
+    margin-top: 20px;
+    width: 80%;
+    flex-direction: column-reverse;
 }
 
-.botao{
-    width: calc(100% - 20px);
-    border-radius: 10px;
-    border: 0.5px solid black;
-    background: transparent;
+
+.botao {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1em; 
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    font-size: 1em;
+    border: none;
+    width: 196px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
 }
 
-.botao:hover{
-    background: rgb(34, 34, 34);
-    color: #FFF;
-    transition: .5s ease-in-out;
+.botao:hover {
+    background-color:#ddd;
+    color:#000;
 }

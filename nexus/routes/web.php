@@ -19,3 +19,4 @@ Route::get('/cadastro', [CadastroController::class, 'cadastro'])->name('cadastro
 Route::get('/telaComanda', [TelaComandaController::class, 'telaComanda'])->name('telaComanda');
 Route::resource('clientes', ClientesController::class);
 Route::get('/reserva', [reservaController::class, 'reserva'])->name('reserva');
+ 
