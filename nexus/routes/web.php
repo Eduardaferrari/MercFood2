@@ -18,5 +18,5 @@ Route::get('/site', [SiteController::class, 'site'])->name('site');
 Route::get('/cadastro', [CadastroController::class, 'cadastro'])->name('cadastro');
 Route::get('/telaComanda', [TelaComandaController::class, 'telaComanda'])->name('telaComanda');
 Route::resource('clientes', ClientesController::class);
-Route::get('/reserva', [reservaController::class, 'reserva'])->name('reserva');
- 
+Route::get('/reserva', [ReservaController::class, 'reserva']);
+Route::post('/reserva', [ReservaController::class, 'store'])->name('reserva.store');

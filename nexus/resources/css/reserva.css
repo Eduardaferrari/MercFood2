@@ -99,36 +99,31 @@ body {
   
   .restaurant {
     display: grid;
-    grid-template-columns: repeat(5, 100px);
-    gap: 10px;
-    justify-content: center;
+    grid-template-columns: repeat(5, 70px);
+    gap: 12px;
+    padding: 12px;
   }
   
   .table {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
-    background-image: url('/public/mesa1.PNG');
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .table.selected {
-    background-color: rgba(255, 0, 0, 0.6); 
-    background-blend-mode: multiply;
+    width: 70px;
+    height: 70px;
+    background: #f2f2f2;
+    border-radius: 8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-weight:700;
   }
   
   .table.occupied {
-    background-color: rgba(255, 0, 0, 0.6);
-    background-blend-mode: multiply;
+    background: #333;
+    color: #fff;
     cursor: not-allowed;
+    opacity: 0.85;
   }
+  
+  .table.selected {
+    box-shadow: 0 0 0 3px rgba(76,175,80,0.25);
+  }
+  
